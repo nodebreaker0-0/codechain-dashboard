@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug",
+            "sourceLanguages": [
+                "rust"
+            ],
+            "preLaunchTask": "cargo build",
+            "internalConsoleOptions": "openOnSessionStart",
+            "program": "${workspaceRoot}/target/debug/codechain-dashboard-server",
+            "terminal": "integrated",
+            "args": [""]
+        },
+        
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release",
+            "sourceLanguages": [
+                "rust"
+            ],
+            "preLaunchTask": "cargo build release",
+            "internalConsoleOptions": "openOnSessionStart",
+            "program": "${workspaceRoot}/target/release/codechain-dashboard-server",
+            "terminal": "integrated",
+            "args": [""]
+        }
+    ]
+  }

@@ -620,8 +620,8 @@ fn get_commit_hash(option: &ProcessOption, codechain_status: &CodeChainStatus) -
 fn parse_flags(args: &[String], option: &ProcessOption) -> (u16, String) {
     let p2p_port = parse_port(args, option);
     let ipc_path = parse_path(args, option);
-
-    (p2p_port.unwrap_or(3485), ipc_path.unwrap_or_else(|| "/tmp/jsonrpc.ipc".to_string()))
+    //Build after applying different ports between heterogeneous chains
+    (p2p_port.unwrap_or(16656), ipc_path.unwrap_or_else(|| "/tmp/jsonrpc.ipc".to_string()))
 }
 
 fn parse_port(args: &[String], option: &ProcessOption) -> Option<u16> {

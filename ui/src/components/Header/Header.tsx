@@ -5,19 +5,19 @@ import Logo from "./img/logo.png";
 
 const getTitle = (pathName: string) => {
   if (pathName === "/") {
-    return "CodeChain Dashboard";
+    return "B-Harvest Dashboard";
   } else if (/^\/nodelist/.test(pathName)) {
     if (pathName === "/nodelist") {
-      return "CodeChain Node List";
+      return "B-Harvest Node List";
     } else {
-      return "CodeChain Node Details";
+      return "B-Harvest Node Details";
     }
   } else if (pathName === "/rpc") {
-    return "CodeChain RPC";
+    return "B-Harvest RPC";
   } else if (pathName === "/log") {
-    return "CodeChain Log";
+    return "B-Harvest Log";
   } else {
-    return "CodeChain";
+    return "B-Harvest";
   }
 };
 
